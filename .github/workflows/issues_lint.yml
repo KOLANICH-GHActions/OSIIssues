@@ -1,0 +1,17 @@
+on:
+  issues:
+    types: [opened, edited]
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: A job to lint the issues
+    steps:
+      - name: clone
+        run: "git clone --depth=1 https://github.com/$GITHUB_REPOSITORY ."
+      - name: osi_issues
+        uses: KOLANICH/issuer@master
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

@@ -1,0 +1,12 @@
+messages:
+  greeting: |
+    Hi, {userName}. Thank you for leaving the idea. Please, fix the following `{count}` issues in it:
+  issuesStillPresent: |
+    {userName}, `{count}` issues are still present:
+  issuesFixed: |
+    The issues that are detected by the linter have been fixed. Good job, {userName}! You also may want to remove all the unselected checkboxes, if they are present.
+
+react:
+  close: 86400
+  #delete: 172800
+
